@@ -1,0 +1,25 @@
+{
+  "name": "schoolloop",
+  "version": "1.0.0",
+  "description": "Schoolloop project to provide SAAS service for education system",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yemol/Schoolloop.git"
+  },
+  "keywords": [
+    "school",
+    "node.js",
+    "react",
+    "mysql"
+  ],
+  "author": "yemol <yemol_yuan@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yemol/Schoolloop/issues"
+  },
+  "homepage": "https://github.com/yemol/Schoolloop#readme"
+}
