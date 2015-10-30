@@ -4,14 +4,14 @@ import React, { Component, PropTypes as T } from 'react'
 export default class MainNavigation extends Component {
 
   static defaultProps = {
-    name: "yemol"
+    current: "yemol"
   }
 
   static propTypes = {
-    name: T.string.isRequired
+    current: T.string.isRequired
   }
 
-  render = () => {
-    return <nav>{this.props.name}</nav>
+  render () {
+    return <nav></nav>
   }
 }

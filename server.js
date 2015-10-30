@@ -7,8 +7,9 @@ import compression from "compression"
 import serveStatic from "serve-static"
 
 import config from "./config.json"
-import routes from "./routers"
+import routes from "./app/routes"
 import { ErrorPage, NotFoundPage } from "./app/container"
+import Html from "./src/Html"
 
 // Define a global app can be access every where
 const server = global.server = express ()
@@ -30,7 +31,9 @@ server.use(async (req, res) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
       console.log ("======200==========")
-      res.status(200).send(ReactDOM.renderToString( <RoutingContext {...renderProps} /> ))
+      const body = ReactDOM.renderToString(<RoutingContext {...renderProps} />)
+      const html = ReactDOM.renderToStaticMarkup(<Html body={body} />)
+      res.status(200).send('<!doctype html>\n' + html )
     } else {
       console.log ("======400==========")
       res.status(404).send(ReactDOM.renderToString( <NotFoundPage /> ))
