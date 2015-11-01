@@ -6,12 +6,13 @@ export default class Html extends Component {
   static propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
-    body: PropTypes.string.isRequired,
+    body: PropTypes.string,
   }
   // have default value for props
   static defaultProps = {
     title: '',
     description: '',
+    body: '',
   }
 
   render () {

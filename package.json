@@ -6,7 +6,8 @@
   "scripts": {
     "test": "node ./test/test",
     "build": "webpack --verbose --colors --display-error-details --config webpack.config.js",
-    "start": "node ./start"
+    "start": "node ./start",
+    "debug": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "ejs": "^2.3.4",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.8.2",
+    "history": "^1.13.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",

@@ -1,10 +1,11 @@
-import React from "react"
-import { Router, Route, Link } from 'react-router'
+import React, { PropTypes, Component } from 'react'
+import routes from "./routes.jsx"
 import { render } from "react-dom"
-import routes from "./routes"
+import createBrowserHistory from 'history/lib/createBrowserHistory'
+import { Router }  from "react-router"
+
 
 require("./components/index.less")
 require("./container/index.less")
 
-
-render (routes, document.getElementById("TopFrame"))
+render (<Router history={createBrowserHistory()} routes={routes} />, document.getElementById("TopFrame"))

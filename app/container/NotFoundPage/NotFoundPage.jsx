@@ -1,7 +1,11 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes as T } from 'react'
 
 
 export default class Html extends Component {
+  static propTypes = {
+    fileName: T.string.isRequired
+  }
+
   render () {
     return (
       <html lang="zh">
@@ -12,7 +16,7 @@ export default class Html extends Component {
           <meta httpEquiv="Content-Language" content="zh" />
         </head>
         <body>
-          not found
+          {fileName} is not found.
         </body>
       </html>
     )
