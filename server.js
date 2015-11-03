@@ -25,7 +25,7 @@ server.use(async (req, res) => {
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
     if (error) {
       console.log ("======500==========")
-      res.status(500).send(ReactDOM.renderToString( <ErrorPage /> ))
+      res.status(500).send(ReactDOM.renderToString( <ErrorPage body={body} /> ))
     } else if (redirectLocation) {
       console.log ("======302==========")
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
@@ -36,7 +36,8 @@ server.use(async (req, res) => {
       res.status(200).send('<!doctype html>\n' + html )
     } else {
       console.log ("======400==========")
-      res.status(404).send(ReactDOM.renderToString( <NotFoundPage /> ))
+      console.log (error)
+      res.status(404).send(ReactDOM.renderToString( <NotFoundPage fileName={error} /> ))
     }
   })
 })

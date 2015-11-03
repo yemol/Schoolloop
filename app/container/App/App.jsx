@@ -3,10 +3,11 @@ import { render } from 'react-dom'
 import { MainNavigation } from "../../components"
 
 export default class App extends Component  {
+
   render () {
     return (
       <div>
-        <MainNavigation />
+        <MainNavigation {...this.props} />
         {this.props.children}
       </div>
     )

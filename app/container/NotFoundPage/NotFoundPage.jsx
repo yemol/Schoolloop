@@ -1,7 +1,7 @@
 import React, { Component, PropTypes as T } from 'react'
 
 
-export default class Html extends Component {
+export default class NotFoundPage extends Component {
   static propTypes = {
     fileName: T.string.isRequired
   }

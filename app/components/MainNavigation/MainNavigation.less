@@ -1,5 +1,9 @@
+@nav_width: 4em;
+@nav_item_height: 40px;
+@nav_item_hover_color: #FF7E47;
 @nav_background_color: #428bca;
-@nav_width: 10em;
+@nav_item_current_color: #FFD247;
+@nav_item_color: #ffffff;
 
 nav{
   top:0;
@@ -9,4 +13,36 @@ nav{
   position: fixed;
   background-color: @nav_background_color;
   float: left;
+}
+
+nav ul.navList{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  li{
+    text-align:center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    a{
+      text-decoration: none;
+      color: @nav_item_color;
+    }
+  }
+  li:hover{
+    background-color:@nav_item_hover_color;
+  }
+  li.current{
+    background-color: @nav_item_current_color;
+  }
+}
+
+nav ul.top{
+  position:absolute;
+  top:0px;
+}
+nav ul.bottom{
+  position:absolute;
+  bottom:0px;
+
 }
