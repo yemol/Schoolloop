@@ -7,7 +7,6 @@ export default class MainNavigation extends Component {
 
   render () {
     const current = this.props.location.pathname
-    console.log (this.props.location)
     return (
       <nav >
         <ul className="navList top">
