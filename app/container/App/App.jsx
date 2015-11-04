@@ -1,6 +1,6 @@
 import React, { Component, PropTypes as T }  from 'react'
 import { render } from 'react-dom'
-import { MainNavigation } from "../../components"
+import { MainNavigation, UserBox } from "../../components"
 
 export default class App extends Component  {
 
@@ -8,7 +8,8 @@ export default class App extends Component  {
     return (
       <div>
         <MainNavigation {...this.props} />
-        {this.props.children}
+        <div className="mainArea">{this.props.children}</div>
+        <UserBox />
       </div>
     )
   }

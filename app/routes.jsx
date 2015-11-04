@@ -9,6 +9,7 @@ const getRoute = function () {
     <Route path="/" component={App} test="123">
       <Route  path="aboutus" component={About} test="123" />
       <Route  path="content" component={Content} test="123" />
+      <Route  path="login" component={Content} test="123" />
     </Route>
   )
 }
