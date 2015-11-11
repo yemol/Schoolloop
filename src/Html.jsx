@@ -26,6 +26,7 @@ export default class Html extends Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" type="text/css" href="index.css" />
           <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+          <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         </head>
         <body>
           <div dangerouslySetInnerHTML={{ __html: this.props.body }} id="TopFrame"></div>

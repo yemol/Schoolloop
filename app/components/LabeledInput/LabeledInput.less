@@ -1,0 +1,24 @@
+.input-row{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 2px solid @lightPrimaryColor;
+  transition-property: all;
+  transition-duration: @transition-duration;
+  transition-timing-function: ease;
+  transition-delay: 0s;  
+  i{
+    padding-right: 15px;
+    color: @lightPrimaryColor;
+  }
+
+  input[type=text], input[type=password]{
+    border: none;
+    outline: none;
+    height: 25px;
+    width: 25.5em;
+  }
+}
+.focused{
+  border-bottom: 2px solid @accentColor;
+}

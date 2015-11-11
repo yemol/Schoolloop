@@ -1,15 +1,20 @@
-import React, { Component, PropTypes as T } from 'react'
-import { Link } from 'react-router'
+import React, { Component, PropTypes as T } from "react"
+import { Link } from "react-router"
+import { TextField, FlatButton, Paper } from "material-ui"
 
 
 export default class UserBox extends Component {
   render () {
     return (
-      <div className="UserArea">
-        <ul >
-          <li ><Link to="/signup" title="注册" ><i className="fa fa-user fa-1x" />注册</Link></li>
-          <li ><Link to="/login" title="登陆" ><i className="fa fa-hand-pointer-o fa-1x" />登陆</Link></li>
-        </ul>
-      </div>)
+    <div className="UserArea">
+      <ul >
+        <li >
+          <Link to="/login" ><i className="fa fa-user fa-lg"></i>登录</Link>
+        </li>
+        <li >
+          <Link to="/login" ><i className="fa fa-edit fa-lg"></i>注册</Link>
+        </li>
+      </ul>
+    </div>)
   }
 }

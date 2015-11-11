@@ -6,7 +6,55 @@ export default class About extends Component {
 
   render () {
     return (
-      <div className="content">this is about part.</div>
+    <div className="content">
+        his is about part.<br />
+      this is about part.<br />
+    this is about part.<br />
+  this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+his is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+this is about part.<br />
+
+    </div>
     )
   }
 }

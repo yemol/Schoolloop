@@ -1,17 +1,16 @@
-@nav_width: 3.5em;
-@nav_item_height: 40px;
-@nav_item_hover_color: #FF7E47;
-@nav_background_color: #428cca;
-@nav_item_current_color: #FFD247;
-@nav_item_color: #ffffff;
+@import "../../color.less";
 
-nav{
+@nav_width: 6em;
+@nav_item_height: 40px;
+
+
+nav.main{
   top:0;
   width: @nav_width;
   height: 100%;
   display: block;
   position: fixed;
-  background-color: @nav_background_color;
+  background-color: @darkPrimaryColor;
   float: left;
 }
 
@@ -21,19 +20,33 @@ nav ul.navList{
   padding: 0px;
   width: 100%;
   li{
-    text-align:center;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    text-align:left;
+    padding-top: 0.4em;
+    padding-bottom: 0.6em;
+    padding-left: 10px;
+
+    transition-property: all;
+    transition-duration: @transition-duration;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
     a{
       text-decoration: none;
-      color: @nav_item_color;
+      color: @textPrimaryColor;
+      font-size: 9pt;
+      span{
+        padding-left: 5px;
+      }
     }
   }
   li:hover{
-    background-color:@nav_item_hover_color;
+    background-color:@lightPrimaryColor;
   }
   li.current{
-    background-color: @nav_item_current_color;
+    background-color: @primaryColor;
+    a {
+      color: @textPrimaryColor;
+    }
   }
 }
 
