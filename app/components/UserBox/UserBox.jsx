@@ -1,7 +1,5 @@
 import React, { Component, PropTypes as T } from "react"
 import { Link } from "react-router"
-import { TextField, FlatButton, Paper } from "material-ui"
-
 
 export default class UserBox extends Component {
   render () {

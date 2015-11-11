@@ -7,6 +7,7 @@ import { Router }  from "react-router"
 require("./components/index.less")
 require("./container/index.less")
 
+
 const rootInstance = render (<Router history={createBrowserHistory()} routes={routes} />, document.getElementById("TopFrame"))
 
 if (module.hot) {

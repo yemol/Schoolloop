@@ -6,7 +6,8 @@ export default class Login extends Component {
     label: T.string.isRequired,
     inputType: T.string.isRequired,
     id: T.string.isRequired,
-    name: T.string.isRequired
+    name: T.string,
+    update: T.func
   }
 
   onFocus = (event) => {
@@ -17,11 +18,16 @@ export default class Login extends Component {
     $(event.target.parentElement).removeClass("focused")
   }
 
+  onChange = (event) => {
+    // console.log ("value changed to:" + event.target.value )
+    this.props.update (event.target.value)
+  }
+
   render () {
     return (
       <div className="input-row">
         <i className={this.props.label} />
-        <input type={this.props.inputType} placeholder={this.props.placeholder} onFocus={this.onFocus} onBlur={this.onBlur} />
+        <input type={this.props.inputType} placeholder={this.props.placeholder} onFocus={this.onFocus} onBlur={this.onBlur} onChange={this.onChange} />
       </div>)
   }
 }
