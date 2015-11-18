@@ -2,7 +2,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const webpack = require("webpack")
 const path = require('path')
 const config = require('./config.json')
-const port = config.port || 5000
+const port = config.port || 8000
 
 module.exports = {
   entry: [
@@ -35,6 +35,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin("[name].css"),
+    new ExtractTextPlugin("index.css"),
   ]
 }

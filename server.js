@@ -6,12 +6,10 @@ import { match, RoutingContext } from 'react-router'
 import compression from "compression"
 import serveStatic from "serve-static"
 import favicon from "serve-favicon"
-
 import config from "./config.json"
 import routes from "./app/routes"
 import { ErrorPage, NotFoundPage } from "./app/container"
 import Html from "./src/Html"
-
 
 // Define a global app can be access every where
 const server = global.server = express ()

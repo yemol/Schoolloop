@@ -24,8 +24,8 @@ export default class Html extends Component {
           <title>{this.props.title}</title>
           <meta name="description" content={this.props.description} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="stylesheet" type="text/css" href="index.css" />
           <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+          <link rel="stylesheet" type="text/css" href="/index.css" />
           <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         </head>
         <body>

@@ -1,4 +1,5 @@
 .DS_Store
 node_modules
 config.json
-build
+build/index.css
+build/index.js
