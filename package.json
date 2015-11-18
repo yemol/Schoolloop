@@ -4,7 +4,10 @@
   "description": "Schoolloop project to provide SAAS service for education system",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/test"
+    "test": "node ./test/test",
+    "build": "webpack --verbose --colors --display-error-details --config webpack.config.js",
+    "start": "node ./start",
+    "debug": "node ./start"
   },
   "repository": {
     "type": "git",
@@ -14,12 +17,52 @@
     "school",
     "node.js",
     "react",
-    "mysql"
+    "mysql",
+    "webpack"
   ],
   "author": "yemol <yemol_yuan@hotmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yemol/Schoolloop/issues"
   },
-  "homepage": "https://github.com/yemol/Schoolloop#readme"
+  "homepage": "https://github.com/yemol/Schoolloop#readme",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "compression": "^1.6.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "font-awesome": "^4.4.0",
+    "history": "^1.13.0",
+    "react": "^0.14.0",
+    "react-cookie": "^0.4.2",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "react-router": "^1.0.0-rc3",
+    "redux": "^3.0.4",
+    "serve-favicon": "^2.3.0",
+    "serve-static": "^1.10.0",
+    "superagent": "^1.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.29",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.21.0",
+    "eslint": "^1.7.3",
+    "eslint-loader": "^1.1.0",
+    "eslint-plugin-react": "^3.6.3",
+    "file-loader": "^0.8.4",
+    "grunt": "^0.4.5",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^1.0.0-rc3",
+    "redux-devtools": "^2.1.5",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-dev-server": "^1.12.1",
+    "webpack-hot-middleware": "^2.5.0"
+  }
 }

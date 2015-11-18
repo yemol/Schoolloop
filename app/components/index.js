@@ -1,0 +1,6 @@
+exports.MainNavigation = require('./MainNavigation/MainNavigation.jsx')
+exports.Content = require('./Content/Content.jsx')
+exports.About = require('./About/About.jsx')
+exports.UserBox = require('./UserBox/UserBox.jsx')
+exports.LabeledInput = require('./LabeledInput/LabeledInput.jsx')
+exports.Button = require('./Button/Button.jsx')

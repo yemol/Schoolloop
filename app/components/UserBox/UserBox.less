@@ -1,0 +1,34 @@
+@import "../../color.less";
+
+div.UserArea{
+  position: fixed;
+  right: 1em;
+  top: 1em;
+  ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    li{
+      float:left;
+      font-size: 9pt;
+      i{
+        padding-right: 4px;
+      }
+    }
+
+    li:first-child {
+      padding-right: 10px;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: @primaryTextColor;
+    padding-bottom: 2px;
+    font-size: 9pt;
+  }
+  a:hover{
+    border-bottom: 2px solid @accentColor;
+  }
+
+}

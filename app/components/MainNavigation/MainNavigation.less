@@ -1,0 +1,61 @@
+@import "../../color.less";
+
+@nav_width: 6em;
+@nav_item_height: 40px;
+
+
+nav.main{
+  top:0;
+  width: @nav_width;
+  height: 100%;
+  display: block;
+  position: fixed;
+  background-color: @darkPrimaryColor;
+  float: left;
+}
+
+nav ul.navList{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  li{
+    text-align:left;
+    padding-top: 0.4em;
+    padding-bottom: 0.6em;
+    padding-left: 10px;
+
+    transition-property: all;
+    transition-duration: @transition-duration;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
+    a{
+      text-decoration: none;
+      color: @textPrimaryColor;
+      font-size: 9pt;
+      span{
+        padding-left: 5px;
+      }
+    }
+  }
+  li:hover{
+    background-color:@lightPrimaryColor;
+  }
+  li.current{
+    background-color: @primaryColor;
+    a {
+      color: @textPrimaryColor;
+    }
+  }
+}
+
+nav ul.top{
+  position:absolute;
+  top:0px;
+}
+nav ul.bottom{
+  position:absolute;
+  bottom:0px;
+
+}
