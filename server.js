@@ -5,21 +5,25 @@ import ReactDOM from "react-dom/server"
 import { match, RoutingContext } from 'react-router'
 import compression from "compression"
 import serveStatic from "serve-static"
+import favicon from "serve-favicon"
 
 import config from "./config.json"
 import routes from "./app/routes"
 import { ErrorPage, NotFoundPage } from "./app/container"
 import Html from "./src/Html"
 
+
 // Define a global app can be access every where
 const server = global.server = express ()
 const port = config.port || 5000
-server.set("port", port)
 
 // compress all out content
 server.use(compression())
 // define static file response
 server.use(serveStatic(path.join(__dirname, 'build')))
+// define the favicon
+server.use(favicon(path.join(__dirname, 'build/images/sublime-text.ico')))
+
 
 server.use(async (req, res) => {
   match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {

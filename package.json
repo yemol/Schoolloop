@@ -7,7 +7,7 @@
     "test": "node ./test/test",
     "build": "webpack --verbose --colors --display-error-details --config webpack.config.js",
     "start": "node ./start",
-    "debug": "npm run build"
+    "debug": "node ./start"
   },
   "repository": {
     "type": "git",
@@ -35,10 +35,12 @@
     "font-awesome": "^4.4.0",
     "history": "^1.13.0",
     "react": "^0.14.0",
+    "react-cookie": "^0.4.2",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.0",
     "react-router": "^1.0.0-rc3",
     "redux": "^3.0.4",
+    "serve-favicon": "^2.3.0",
     "serve-static": "^1.10.0",
     "superagent": "^1.4.0"
   },
@@ -58,6 +60,9 @@
     "react-router": "^1.0.0-rc3",
     "redux-devtools": "^2.1.5",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.2"
+    "webpack": "^1.12.2",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-dev-server": "^1.12.1",
+    "webpack-hot-middleware": "^2.5.0"
   }
 }

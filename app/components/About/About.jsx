@@ -10,49 +10,8 @@ export default class About extends Component {
         his is about part.<br />
       this is about part.<br />
     this is about part.<br />
-  this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-his is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
-this is about part.<br />
+      this is about part.<br />
+
 
     </div>
     )

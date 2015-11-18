@@ -11,10 +11,8 @@ require("./container/index.less")
 const rootInstance = render (<Router history={createBrowserHistory()} routes={routes} />, document.getElementById("TopFrame"))
 
 if (module.hot) {
-  require('react-hot-loader/Injection').RootInstanceProvider.injectProvider({
-    getRootInstances () {
-      // Help React Hot Loader figure out the root component instances on the page:
-      return [ rootInstance ]
-    }
-  })
+  module.hot.accept();
+  module.hot.dispose(function() {
+    clearInterval(timer);
+  });
 }

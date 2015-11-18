@@ -1,15 +1,17 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 const webpack = require("webpack")
 const path = require('path')
+const config = require('./config.json')
+const port = config.port || 5000
 
 module.exports = {
-  entry: {
-    index: './app/index.jsx',
-    // index: "./app/index.less"
-  },
+  entry: [
+      './app/index.jsx'
+    ]
+  ,
   output: {
-    path: __dirname + "/build",
-    filename: '[name].js'
+    path: __dirname + "\\build",
+    filename: 'index.js',
   },
   resolve: {
     extensions: [ '', '.js', '.jsx' ]
@@ -33,6 +35,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin("[name].css")
+    new ExtractTextPlugin("[name].css"),
   ]
 }
