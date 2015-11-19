@@ -1,51 +1,49 @@
-import path from "path"
-import express from "express"
-import React from "react"
-import ReactDOM from "react-dom/server"
-import { match, RoutingContext } from 'react-router'
-import compression from "compression"
-import serveStatic from "serve-static"
-import favicon from "serve-favicon"
-import config from "./config.json"
-import routes from "./app/routes"
-import { ErrorPage, NotFoundPage } from "./app/container"
-import Html from "./src/Html"
+var http = require('http');
+var express = require('express');
+var app = express();
+app.use(require('morgan')('short'));
 
-// Define a global app can be access every where
-const server = global.server = express ()
-const port = config.port || 5000
+(function() {
 
-// compress all out content
-server.use(compression())
-// define static file response
-server.use(serveStatic(path.join(__dirname, 'build')))
-// define the favicon
-server.use(favicon(path.join(__dirname, 'build/images/sublime-text.ico')))
+  console.log("process.env.NODE_ENV = " + process.env.NODE_ENV)
 
+  // Step 1: Create & configure a webpack compiler
+  var webpack = require('webpack');
+  var webpackConfig = require(process.env.WEBPACK_CONFIG ? process.env.WEBPACK_CONFIG : './webpack.config.dev');
+  var compiler = webpack(webpackConfig);
 
-server.use(async (req, res) => {
-  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
-    if (error) {
-      console.log ("======500==========")
-      res.status(500).send(ReactDOM.renderToString( <ErrorPage body={body} /> ))
-    } else if (redirectLocation) {
-      console.log ("======302==========")
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
-    } else if (renderProps) {
-      console.log ("======200==========")
-      const body = ReactDOM.renderToString(<RoutingContext {...renderProps} />)
-      const html = ReactDOM.renderToStaticMarkup(<Html body={body} />)
-      res.status(200).send('<!doctype html>\n' + html )
-    } else {
-      console.log ("======400==========")
-      console.log (error)
-      res.status(404).send(ReactDOM.renderToString( <NotFoundPage fileName={error} /> ))
-    }
-  })
+  // Step 2: Attach the dev middleware to the compiler & the server
+  app.use(require("webpack-dev-middleware")(compiler, {
+    noInfo: true, publicPath: webpackConfig.output.publicPath
+  }));
+
+  // Step 3: Attach the hot middleware to the compiler & the server
+  app.use(require("webpack-hot-middleware")(compiler, {
+    log: console.log, path: webpackConfig.output.publicPath, heartbeat: 5 * 1000
+  }));
+})();
+
+// Do anything you like with the rest of your express application.
+
+app.all("/css/*", (req, res) => {
+  res.sendFile(__dirname + "/build" + req.path )
+})
+app.all("/fonts/*", (req, res) => {
+  res.sendFile(__dirname + "/build" + req.path )
+})
+app.all("/images/*", (req, res) => {
+  res.sendFile(__dirname + "/build" + req.path )
 })
 
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
 
-/* istanbul ignore next */
-server.listen(port, () => {
-  console.log('Listening on port %d', port)
-})
+
+
+if (require.main === module) {
+  var server = http.createServer(app);
+  server.listen(process.env.PORT || 8000, function() {
+    console.log("Listening on %j", server.address());
+  });
+}

@@ -61,7 +61,7 @@ export default class Login extends Component {
 
   render () {
     return (
-      <div className="LoginBox">111
+      <div className="LoginBox">
         <span className="circle-mask"><i className="fa fa-user fa-5x"></i></span>
           <LabeledInput id="userEmail" placeholder="邮箱" label="fa fa-envelope fa-lg fa-fw" inputType="text" update={::this.updateEmail}  />
           <LabeledInput id="userPassword" placeholder="密码" label="fa fa-lock fa-lg fa-fw" inputType="password" update={::this.updatePassword} />

@@ -11,6 +11,7 @@ export default class About extends Component {
       this is about part.<br />
     this is about part.<br />
       this is about part.<br />
+    12
 
 
     </div>

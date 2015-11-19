@@ -4,6 +4,10 @@ import { MainNavigation, UserBox } from "../../components"
 
 export default class App extends Component  {
 
+  componentWillUnmount() {
+    console.log ("App reloaded!")
+  }
+
   render () {
     return (
       <div>

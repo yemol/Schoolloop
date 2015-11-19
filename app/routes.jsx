@@ -4,16 +4,16 @@ import { App, Login } from "./container"
 import { Content, About } from "./components"
 
 
-const getRoute = function () {
-  console.log ("enter routing")
+module.exports = function () {
+  console.log ("! enter routing")
+  
   return (
     <Route path="/" component={App} >
-      <IndexRoute  component={About}  />
+      <IndexRoute  component={Content}  />
       <Route  path="aboutus" component={About}  />
       <Route  path="content" component={Content} />
       <Route  path="login" component={Login} />
+      <Route  path="user" component={Login} />
     </Route>
   )
 }
-
-module.exports = getRoute()
